@@ -14,4 +14,10 @@ def be_awsome(name):
 def greet_bob(greeter_func):
     return greeter_func("Bob")
 
-# Here, say_hello
+# Here, say_hello() and be_awsome() are regular functions that expect a name given as strings.
+# The greet_bob() function however, expects a function as its argument. We can, for instance, pass
+# it the say_hello()  or the be_awesome() function:
+
+greet_bob(say_hello)
+
+greet_bob(be_awsome)
